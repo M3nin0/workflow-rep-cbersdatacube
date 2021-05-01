@@ -8,7 +8,7 @@ Para tornar as operações padronizadas de modo a permitir sua reprodução, tod
 - [2. Reutilização de ERC para classificação de outra região](reusage-workflow)
 - [3. Publicação dos ERCs na plataforma Invenio RDM](publication-workflow)
 
-> Cabe notar que para a execução do 3° *workflow* é necessário a configuração do Invenio RDM. No repositório do portal, configurado neste Trabalho, há os passos disponíveis para a configuração do portal. Link para acesso ao portal: [M3nin0/experiment-reproducible-research-portal](https://github.com/M3nin0/experiment-reproducible-research-portal)
+> Cabe notar que para a execução do 3° *workflow* é necessário a configuração do Invenio RDM. No repositório do portal, configurado neste Trabalho, há os passos disponíveis para a configuração. Link para acesso ao portal: [M3nin0/experiment-reproducible-research-portal](https://github.com/M3nin0/experiment-reproducible-research-portal)
 
 ## Execução
 
