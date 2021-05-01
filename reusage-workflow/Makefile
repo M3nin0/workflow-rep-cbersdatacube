@@ -12,3 +12,7 @@ clean:
 workflow: check clone
 	cd experiment-rep-cbersdatacube \
 		&& make replicate 
+
+remove_intermediate:
+	cd experiment-rep-cbersdatacube \
+		&& make removeintermediate 

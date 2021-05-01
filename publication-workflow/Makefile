@@ -5,6 +5,7 @@ install_reprocli:
 		&& rm -rf experiment-reproducible-research-portal
 
 ingest:
-	reprocli ingest --compendium $$compendium \
-		--invenio-access-token $$token \
-		--invenio-service-url $$url
+	cd ../$$path \
+		&& reprocli ingest --compendium $$compendium \
+			--invenio-access-token $$token \
+			--invenio-service-url $$url
