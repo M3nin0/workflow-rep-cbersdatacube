@@ -24,6 +24,19 @@ reuse: environment
 		&& make workflow
 
 #
+# validation
+#
+validation_build:
+	docker build -t "workflow_rep_validation:temp" -f validation-workflow/Dockerfile .
+
+validation_diff_plot: validation_build
+	docker run -ti --name workflow_experiment_diff_plot -v ${PWD}:/opt/experiment/ \
+		workflow_rep_validation:temp python validation-workflow/difference_plot.py \
+		--map1 $$map1 --map2 $$map2 --typeof $$typeof
+
+	docker rm -f workflow_experiment_diff_plot
+
+#
 # Remove intermediate data
 #
 remove_replicate_intermediate_data:

@@ -2,11 +2,12 @@
 
 Este repositório armazena todos os *workflows* utilizados para a produção do experimento da proposta de trabalho "Brazil Data Cube Reproducible Research Management".
 
-Para tornar as operações padronizadas de modo a permitir sua reprodução, todos os passos foram descritos utilizandos arquivos `Makefile`. Neste repositório, estão presentes 3 *workflows*, sendo eles:
+Para tornar as operações padronizadas de modo a permitir sua reprodução, todos os passos foram descritos utilizandos arquivos `Makefile`. Neste repositório, estão presentes 4 *workflows*, sendo eles:
 
 - [1. Replicação do trabalho CBERS Data Cube](replication-workflow);
 - [2. Reutilização de ERC para classificação de outra região](reusage-workflow)
 - [3. Publicação dos ERCs na plataforma Invenio RDM](publication-workflow)
+- [4. Validação de mapas gerados com várias execuções do mesmo *script* (Replicação ou Reutilização)](validation-workflow)
 
 > Cabe notar que para a execução do 3° *workflow* é necessário a configuração do Invenio RDM. No repositório do portal, configurado neste Trabalho, há os passos disponíveis para a configuração. Link para acesso ao portal: [M3nin0/experiment-reproducible-research-portal](https://github.com/M3nin0/experiment-reproducible-research-portal)
 
@@ -75,3 +76,17 @@ make publish_replication token=... url=...
 ```
 
 > Lembre-se de trocar os "..." pelos valores equivalentes ao seu serviço do Invenio RDM
+
+### *workflow* - Validação de mapas gerados com várias execuções do mesmo *script* (Replicação ou Reutilização)
+
+> **Nota**: Para a execução deste *workflow* espera-se que as etapas de Produção e Reutilização, apresentadas anteriormente, já tenham sido executadas.
+
+Neste *workflow* é realizado o processo de comparação entre dois mapas de LULC, tenham sido eles gerados pela Replicação ou Reutilização.
+
+Considerando que todos os resultados já tenham sido gerados, este *workflow* pode ser executado, para isso, pode-se fazer o uso do seguinte comando:
+
+```shell
+make validation_diff_plot map1=... map2=... typeof=...
+```
+
+Os parâmetros `map1` e `map2` devem ser utilizados para definir o arquivo completo de onde está o resultado. É assumido que todos os arquivos estão no mesmo diretório que os demais *workflows* e seus resultados. Além disso, o parâmetro `typeof` deve ser utilizado para definir por qual processo o mapa foi gerado (`replication` ou `reuse`).
