@@ -41,12 +41,13 @@ def difference_plot_cli(map1, map2, typeof):
                 cbar=False, 
                 linecolor='black',
                 linewidths=.3,
-                cmap='gist_yarg')
+                cmap='gist_yarg',
+                annot_kws={"fontsize": 14})
+    
+    plt.xlabel("Classes geradas (Execução 1)", fontsize=14)
+    plt.ylabel("Classes geradas (Execução 2)", fontsize=14)
 
-    plt.xlabel("Classes geradas (Execução 1)")
-    plt.ylabel("Classes geradas (Execução 2)")
-
-    plt.savefig(os.path.join(basepath, 'cf.png'), dpi=600, bbox_inches='tight', pad_inches=0.0)
+    plt.savefig(os.path.join(basepath, 'cf.pdf'), dpi=600, bbox_inches='tight', pad_inches=0.0)
 
 if __name__ == '__main__':
     difference_plot_cli()
