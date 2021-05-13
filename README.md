@@ -59,7 +59,7 @@ make reuse
 
 > **Nota**: Para a execução deste *workflow* espera-se que as etapas listadas anteriormente já tenham sido executadas.
 
-Neste *workflow* é realizado a publicação dos ERCs gerados em ambos os passos anteriores. A publicação é feita em uma instância da plataforma [Invenio RDM](https://inveniosoftware.org/products/rdm/), através da ferramenta [reprocli](https://github.com/M3nin0/experiment-reproducible-research-portal/tree/main/tool), desenvolvida ao neste trabalho.
+Neste *workflow* é realizado a publicação dos ERCs gerados em ambos os passos anteriores. A publicação é feita em uma instância da plataforma [Invenio RDM](https://inveniosoftware.org/products/rdm/), através da ferramenta [reprocli](https://github.com/M3nin0/experiment-reproducible-research-portal/tree/main/tool), desenvolvida neste trabalho.
 
 **Pré-requisito**: É necessário ter uma instância do Invenio RDM configurada juntamente com uma chave de acesso à API Restful da plataforma. Neste trabalho foi feita a configuração de um Invenio RDM e os passos seguidos estão registrados em arquivos `Makefile` no [repositório da aplicação](https://github.com/M3nin0/experiment-reproducible-research-portal/tree/main/portal). Caso seja necessário, pode-se conferir os passos utilizados para realizar sua própria configuração.
 
